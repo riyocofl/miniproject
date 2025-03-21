@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:beans="http://www.springframework.org/schema/beans" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd 
+http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+<annotation-driven/>
+<!--  <resources : 파키지를 정하여 설정하는 태그  -->
+<resources location="/" mapping="/**"/>
+<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<beans:property name="prefix" value="/"/>
+<beans:property name="suffix" value="-1"/>
+</beans:bean>
+<context:component-scan base-package="miniproject"/>
+
+<!-- 파일설정 -->
+<beans:bean id="multipartResolver" class="">
+<beans:property name=""></beans:property>
+<beans:property name=""></beans:property>
+<beans:property name=""></beans:property>
+</beans:bean>
+</beans:beans>
